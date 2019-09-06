@@ -26,7 +26,7 @@ RUN apk --no-cache add curl \
 RUN addgroup -S app && adduser -S -g app app
 WORKDIR /home/app
 
-COPY --from=builder ./entry/target/functions.jar /home/app 
+COPY --from=builder /home/app/entry/target/functions.jar /home/app 
 
 RUN chown -R app /home/app
 USER app
