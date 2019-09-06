@@ -9,7 +9,7 @@
 		<version>0.0.1</version>
 	</parent>
 	<groupId>io.huduku.openfaas</groupId>
-	<artifactId>functions</artifactId>
+	<artifactId>function</artifactId>
 	<version>0.0.1</version>
 	<name>functions</name>
 	<url>http://maven.apache.org</url>
@@ -18,15 +18,16 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>of-java8-undertow-functions</groupId>
-			<artifactId>of-java8-undertow-functions</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.undertow/undertow-core -->
+		<dependency>
+		    <groupId>io.undertow</groupId>
+		    <artifactId>undertow-core</artifactId>
+		    <version>2.0.26.Final</version>
 		</dependency>
 	</dependencies>
 </project>

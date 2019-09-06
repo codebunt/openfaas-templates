@@ -24,7 +24,8 @@
   </dependencies>
   <modules>
   	<module>entry</module>
-  	<module>functions</module>
+  	
+  	<module>function</module>
   </modules>
   
 </project>
