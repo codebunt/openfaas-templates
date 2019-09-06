@@ -11,8 +11,6 @@ RUN addgroup -S app && adduser -S -g app app \
 
 ENV MAVEN_HOME /usr/share/maven
 
-RUN mkdir -p /home/app
-
 WORKDIR /home/app
 
 COPY . /home/app
@@ -28,7 +26,7 @@ RUN apk --no-cache add curl \
 RUN addgroup -S app && adduser -S -g app app
 WORKDIR /home/app
 
-COPY ./entry/target/functions.jar /home/app 
+COPY --from=builder ./entry/target/functions.jar /home/app 
 
 RUN chown -R app /home/app
 USER app
