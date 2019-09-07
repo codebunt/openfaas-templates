@@ -6,7 +6,7 @@ import io.undertow.Undertow;
 public class App {
     public static void main(final String[] args) {
         Undertow server = Undertow.builder()
-                .addHttpListener(8080, "127.0.0.1")
+                .addHttpListener(8081, "127.0.0.1")
                 .setHandler(new OpenFaasHandler()).build();
         server.start();
     }
